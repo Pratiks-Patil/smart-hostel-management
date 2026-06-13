@@ -1,70 +1,217 @@
-# Getting Started with Create React App
+# 🏨 Smart Hostel Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, role-based **Smart Hostel Management System** built using **React.js** and **Firebase** to streamline hostel operations through digital complaint management, real-time notices, secure authentication, and dedicated dashboards for students and administrators.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🌟 Overview
 
-### `npm start`
+Managing hostel activities manually can be time-consuming and inefficient. This project provides a centralized platform where students can raise and track complaints, while administrators can manage notices, monitor issues, and oversee hostel operations through an intuitive dashboard.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The application is designed with a clean UI, real-time database synchronization, and secure authentication mechanisms to deliver a seamless user experience.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## ✨ Key Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 👨‍🎓 Student Module
 
-### `npm run build`
+* Secure login using:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  * Email & Password
+  * Google Sign-In
+  * Phone Number (OTP Authentication)
+* Personalized dashboard
+* Raise complaints with categorized issue types
+* Track complaint status (Pending, In Progress, Resolved)
+* View hostel notices in real time
+* Edit account/profile information
+* Activity visualization through charts
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 🛡️ Admin Module
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* Dedicated admin login
+* View and manage all complaints
+* Update complaint status in real time
+* Create and delete hostel notices
+* View registered student information
+* Complaint analytics dashboard
+* Monitor live and resolved complaints
 
-### `npm run eject`
+### 📊 Analytics
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* Interactive charts displaying complaint trends
+* Real-time statistics for better hostel management
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 🔄 Real-Time Updates
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* Firestore-based live synchronization
+* Instant notice publication
+* Immediate complaint status updates
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 🛠️ Tech Stack
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+| Category       | Technologies              |
+| -------------- | ------------------------- |
+| Frontend       | React.js                  |
+| Backend        | Firebase                  |
+| Authentication | Firebase Authentication   |
+| Database       | Cloud Firestore           |
+| Routing        | React Router DOM          |
+| Charts         | Chart.js, React ChartJS 2 |
+| Icons          | React Icons               |
+| Styling        | CSS3, Flexbox             |
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## 📂 Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```text
+smart-hostel/
+├── public/
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── assets/
+│   ├── firebase.js
+│   └── App.js
+├── package.json
+└── README.md
+```
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🔐 Authentication Methods
 
-### Making a Progressive Web App
+* Email & Password Authentication
+* Google Authentication
+* Phone Number OTP Authentication
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Authentication is securely managed using **Firebase Authentication**.
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🗄️ Firestore Collections
 
-### Deployment
+### Users
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Stores student profile information including:
 
-### `npm run build` fails to minify
+* Name
+* Email
+* Room Number
+* Wing
+* Role
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Complaints
+
+Stores:
+
+* Category
+* Title
+* Description
+* Status
+* Student Details
+* Timestamp
+
+### Notices
+
+Stores notices published by the administrator.
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/Pratiks-Patil/smart-hostel-management.git
+cd smart-hostel-management
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Configure Firebase
+
+Create your Firebase project and add your configuration inside:
+
+```
+src/firebase.js
+```
+
+Enable:
+
+* Firebase Authentication
+* Cloud Firestore
+
+### 4. Run the application
+
+```bash
+npm start
+```
+
+The application will start at:
+
+```
+http://localhost:3000
+```
+
+---
+
+## 📱 Future Scope
+
+* 💳 Online Hostel Fee Payment
+* 📲 Mobile Application (React Native / Expo)
+* 🔔 Push Notifications
+* 🧾 Digital Receipt Generation
+* 🏢 Multi-Hostel Management
+* 📈 Advanced Analytics & Reports
+* 👨‍🔧 Dedicated Maintenance Staff Portal
+
+---
+
+## 🎯 Learning Outcomes
+
+This project demonstrates:
+
+* Component-based architecture in React
+* Role-based access control
+* Real-time database integration
+* Authentication using Firebase
+* Dynamic state management
+* Client-side routing
+* Third-party library integration
+* Responsive UI design
+
+---
+
+## 📸 Screenshots
+
+<table>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/d1a5900c-1c31-4ca8-9c37-9d93557f6a7d" width="100%" alt="Landing Page"></td>
+    <td><img src="https://github.com/user-attachments/assets/20723283-9810-4859-9843-212151d6edb8" width="100%" alt="Login"></td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/a4f3144b-af02-4e1d-819b-7b897ed908b5" width="100%" alt="Signup"></td>
+    <td><img src="https://github.com/user-attachments/assets/82f40bcc-7b2e-4e39-b0b9-98d36d4b0579" width="100%" alt="Student Dashboard"></td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/191ed375-8408-451e-8b6a-03d3e6c87c78" width="100%" alt="Admin Dashboard"></td>
+    <td><img src="https://github.com/user-attachments/assets/be18b10f-5c7e-4fc6-9a2d-a6dcd8b32fc6" width="100%" alt="Notice Management"></td>
+  </tr>
+</table>
+
+---
+
+## 👨‍💻 Author
+
+**Pratik Patil**
+
+If you found this project useful, consider giving it a ⭐ on GitHub!
