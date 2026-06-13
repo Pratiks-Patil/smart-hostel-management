@@ -1,0 +1,59 @@
+.account-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 0;
+}
+
+.account-card {
+  width: 380px;
+  background: rgba(255,255,255,0.18);
+  backdrop-filter: blur(14px);
+  border-radius: 18px;
+  padding: 30px;
+  color: white;
+}
+
+.account-card h2 {
+  margin-bottom: 5px;
+}
+
+.account-card p {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.account-card input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 12px;
+}
+
+.account-card input:disabled {
+  opacity: 0.6;
+}
+
+.account-card button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 25px;
+  border: none;
+  font-weight: bold;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.account-card button {
+  background: #00c6ff;
+  color: black;
+}
+
+.account-card .back {
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255,255,255,0.4);
+}
